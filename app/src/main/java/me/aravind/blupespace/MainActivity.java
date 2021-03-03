@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void Contribute (View view) {
-        goToUrl ( "http://github.com/Aravind1444");
+        goToUrl ( "https://github.com/Aravind1444/Blupe.Space");
     }
 
     public void Contact (View view) {
