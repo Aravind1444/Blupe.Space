@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "777782187271",
+    "project_id": "blupe-space",
+    "storage_bucket": "blupe-space.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777782187271:android:426701ead52291a341e1a2",
+        "android_client_info": {
+          "package_name": "me.aravind.blupespace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777782187271-op8bjum6enpok3qsvsqneo6dc7m64qn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.aravind.blupespace",
+            "certificate_hash": "cd589c0be79fbd86fd9d9b397adce4e6e5e30efb"
+          }
+        },
+        {
+          "client_id": "777782187271-3gtrmaodm05qi3iu33hndqvmutkuqjmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt6fQh9-gxSd7_TQptC8m9UAIa-zQiJ00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777782187271-3gtrmaodm05qi3iu33hndqvmutkuqjmg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
