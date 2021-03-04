@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/backbutton" />
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#fff"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/blupel" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="#f5f5f5"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingTop="15dp"
+                    android:text="WORKING"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:justificationMode="inter_word"
+                    android:text="You can enter the name for a new meeting room, or name of the pre existing room in the above section. After that, click on JOIN button and you will be automatically joined to the room. You will have to provide the video and audio permission for proper functioning. Also, once the room is created, password can be enabled before sharing the link with others. Password protection will enable only those with the passwords to join the room. The other participants can type in the room name on the Blupe app or the Blupe website and enter the password to join the room. Along with that, a lot of other features are also available such as raising hands, live streaming to YouTube, etc. "
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingTop="15dp"
+                    android:text="ABOUT"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:justificationMode="inter_word"
+                    android:text="BLUPE SPACE is a free and open sourced video conferencing application, aimed at providing free services and promoting open sourced projects. The project used Jitsi Meet which comes with it's own encryption and security features. More over, BLUPE SPACE will not ask you to sign up on the platform or collect any of your data. "
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/mybutton"
+                    android:onClick="moredetails"
+                    android:text="More Details"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="OnClick" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp">
+
+                    <Button
+                        android:id="@+id/contact"
+                        android:layout_width="150dp"
+                        android:layout_height="52dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mybutton"
+                        android:onClick="Contact"
+                        android:paddingHorizontal="20dp"
+                        android:text="Contact"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="OnClick" />
+
+                    <Button
+                        android:id="@+id/contribute"
+                        android:layout_width="150dp"
+                        android:layout_height="52dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="12dp"
+                        android:layout_toRightOf="@id/contact"
+                        android:layout_weight="1"
+                        android:background="@drawable/mybutton"
+                        android:onClick="Contribute"
+                        android:paddingHorizontal="20dp"
+                        android:text="Contribute"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="OnClick" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+

@@ -1,9 +1,12 @@
 package me.aravind.blupespace;
 
 import android.content.Intent;
-import android.net.Uri;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -26,24 +29,43 @@ public class MainActivity extends AppCompatActivity {
     int[] sampleImages = {R.drawable.rocket, R.drawable.webandapp, R.drawable.youtube, R.drawable.safeandsecure, R.drawable.opensource, R.drawable.hands, R.drawable.link};
 
     private FirebaseAnalytics mFirebaseAnalytics;
+    private Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //statubar color code
+        Window window = getWindow();
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(Color.parseColor("#3E50B3"));
+        //end of statusbar color code
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //navigate to info page
+        button = (Button) findViewById(R.id.infoButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         //carousel view
         carouselView = (CarouselView) findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
-
         carouselView.setImageListener(imageListener);
 
         //hiding the carousel stroke
         CarouselView customCarouselView = (CarouselView) findViewById(R.id.carouselView);
         CirclePageIndicator indicator = (CirclePageIndicator) customCarouselView.findViewById(R.id.indicator);
-        if(indicator !=null){
+        if (indicator != null) {
             indicator.setVisibility(View.GONE);
         }
 
@@ -67,24 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 .setVideoMuted(true)
                 .build();
     }
-    public void Contribute (View view) {
-        goToUrl ( "https://github.com/Aravind1444/Blupe.Space");
-    }
-
-    public void Contact (View view) {
-        goToUrl ( "mailto:hello@aravind.me");
-    }
-
-    public void Coffee (View view) {
-        goToUrl ( "https://www.buymeacoffee.com/aravindv");
-    }
-
-    private void goToUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
-    }
-
 
     ImageListener imageListener = new ImageListener() {
         @Override
