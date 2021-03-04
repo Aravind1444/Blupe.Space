@@ -19,16 +19,34 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:scaleType="fitStart"
-                android:paddingLeft="10dp"
-                android:paddingBottom="5dp"
-                android:paddingTop="10dp"
-                android:src="@drawable/blupel"
-                android:background="#fff"
-                />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:scaleType="fitStart"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/blupel"
+                    android:background="#fff"
+                    />
+                <Button
+                    android:layout_width="162dp"
+                    android:layout_height="200dp"
+                    android:text="WEATHER STATION"
+                    android:textStyle="bold"
+                    android:textSize="26dp"
+                    android:gravity="bottom"
+                    android:typeface="monospace"
+                    android:drawableTop="@drawable/infoicon"
+                    android:background="@drawable/weather"
+                    android:id="@+id/weather_station" />`
+
+            </LinearLayout>
 
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/carouselView"

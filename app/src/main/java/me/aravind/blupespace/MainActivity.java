@@ -23,7 +23,7 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
 
     CarouselView carouselView;
-    int[] sampleImages = {R.drawable.rocket, R.drawable.webandapp, R.drawable.rocket, R.drawable.webandapp, R.drawable.rocket};
+    int[] sampleImages = {R.drawable.rocket, R.drawable.webandapp, R.drawable.youtube, R.drawable.safeandsecure, R.drawable.opensource, R.drawable.hands, R.drawable.link};
 
     private FirebaseAnalytics mFirebaseAnalytics;
 
@@ -52,14 +52,9 @@ public class MainActivity extends AppCompatActivity {
         // object creation of JitsiMeetConferenceOptions
         // class by the name of options
         URL serverURL;
-        //serverURL = (URL) in.readSerializable();
-
-
         try {
             // When using JaaS, replace "https://meet.jit.si" with the proper serverURL
-            //serverURL = (URL) in.readSerializable();
-
-            serverURL = new URL("https://blupe.westus.cloudapp.azure.com").in.readSerializable();
+            serverURL = new URL("https://blupe.westus.cloudapp.azure.com/");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             throw new RuntimeException("Invalid server URL!");
@@ -68,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
                 .setServerURL(serverURL)
                 .setWelcomePageEnabled(false)
+                .setAudioMuted(true)
+                .setVideoMuted(true)
                 .build();
     }
     public void Contribute (View view) {
@@ -101,6 +98,16 @@ public class MainActivity extends AppCompatActivity {
     // we have declared the name of onButtonClick() method
     // in our xml file now we are going to define it.
     public void onButtonClick(View v) {
+
+        URL serverURL;
+        try {
+            // When using JaaS, replace "https://meet.jit.si" with the proper serverURL
+            serverURL = new URL("https://blupe.westus.cloudapp.azure.com/");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Invalid server URL!");
+        }
+
         // initialize editText with method findViewById()
         // here editText will hold the name of room which is given by user
         EditText editText = findViewById(R.id.conferenceName);
@@ -119,6 +126,10 @@ public class MainActivity extends AppCompatActivity {
             JitsiMeetConferenceOptions options
                     = new JitsiMeetConferenceOptions.Builder()
                     .setRoom(text)
+                    .setServerURL(serverURL)
+                    .setWelcomePageEnabled(false)
+                    .setAudioMuted(true)
+                    .setVideoMuted(true)
                     .build();
             JitsiMeetActivity.launch(this, options);
         }
