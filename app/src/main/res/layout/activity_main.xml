@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#3f51b5"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,138 +19,166 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:scaleType="fitStart"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/blupel"
+                android:background="#fff"
+                />
+
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/carouselView"
                 android:layout_width="match_parent"
-                android:layout_height="225dp"
-                app:fillColor="#fff"
-                app:pageColor="#fff"
+                android:layout_height="350dp"
+                app:fillColor="#3F51B5"
+                app:pageColor="#3F51B5"
                 app:slideInterval="3500"
                 app:strokeWidth="0dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Join / Create a Meeting"
-                android:layout_margin="12dp"
-                android:textSize="25dp"
-                android:textColor="#000"
-                android:textAlignment="center"
-                android:paddingTop="20dp"
-                />
 
-            <EditText
-                android:id="@+id/conferenceName"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_margin="12dp"
-                android:hint="Enter room name"
-                tools:ignore="HardcodedText" />
-
-            <!--Button for creating a room for video
-                calling by it's clicking event-->
-            <!--When clicking event occur on button
-                then onButtonClick method will call -->
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_margin="12dp"
-                android:background="@drawable/mybutton"
-                android:onClick="onButtonClick"
-                android:text="Join"
-                android:textColor="#FFFFFF"
-                tools:ignore="OnClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="WORKING"
-                android:layout_margin="12dp"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textAlignment="center"
-                android:paddingTop="15dp"
-                android:layout_marginBottom="0dp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="You can enter the name for a new meeting room, or name of the pre existing room in the above section. After that, click on JOIN button and you will be automatically joined to the room. You will have to provide the video and audio permission for proper functioning. Also, once the room is created, password can be enabled before sharing the link with others. Password protection will enable only those with the passwords to join the room. The other participants can type in the room name on the app and enter the password to join the room. Along with that, a lot of other features are also available such as raising hands, live streaming to YouTube, etc. "
-                android:layout_marginHorizontal="12dp"
-                android:textSize="14dp"
-                android:textColor="#000"
-                android:justificationMode="inter_word"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ABOUT"
-                android:layout_margin="12dp"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:textAlignment="center"
-                android:paddingTop="15dp"
-                android:layout_marginBottom="0dp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="BLUPE SPACE is a free and open sourced video conferencing application, aimed at providing free services and promoting open sourced projects. The project used Jitsi Meet which comes with it's own encryption and security features. More over, BLUPE SPACE will not ask you to sign up on the platform or collect any of your data. "
-                android:layout_marginHorizontal="12dp"
-                android:textSize="14dp"
-                android:textColor="#000"
-                android:justificationMode="inter_word"
-                android:layout_marginBottom="20dp"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_margin="12dp"
-                android:background="@drawable/mybutton"
-                android:onClick="Coffee"
-                android:text="Buy Me a Coffee"
-                android:textColor="#FFFFFF"
-                tools:ignore="OnClick" />
-
+            <!--Code for rounded corner-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="20dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".MainActivity"
+                android:background="@drawable/rounded"
+                >
 
-                <Button
-                    android:id="@+id/contact"
-                    android:layout_width="150dp"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Join/Create A Meeting"
+                    android:layout_margin="12dp"
+                    android:textSize="25dp"
+                    android:textColor="#000"
+                    android:textAlignment="center"
+                    android:paddingTop="20dp"
+                    />
+
+                <EditText
+                    android:id="@+id/conferenceName"
+                    android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="12dp"
+                    android:hint="Enter Room Name"
+                    tools:ignore="HardcodedText"
+                    android:textColor="#000"
+                    android:textColorHint="#808080"
+                    android:backgroundTint="#808080"
+                    />
+
+                <!--Button for creating a room for video
+        calling by it's clicking event-->
+                <!--When clicking event occur on button
+                    then onButtonClick method will call -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
                     android:layout_margin="12dp"
                     android:background="@drawable/mybutton"
-                    android:onClick="Contact"
-                    android:paddingHorizontal="20dp"
-                    android:text="Contact"
+                    android:onClick="onButtonClick"
+                    android:text="Join"
                     android:textColor="#FFFFFF"
-                    tools:ignore="OnClick"
-                    android:layout_weight="1"/>
-
-                <Button
-                    android:layout_width="150dp"
-                    android:paddingHorizontal="20dp"
-                    android:layout_height="52dp"
-                    android:layout_margin="12dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_toRightOf="@id/contact"
-                    android:background="@drawable/mybutton"
-                    android:onClick="Contribute"
-                    android:text="Contribute"
-                    android:id="@+id/contribute"
-                    android:textColor="#FFFFFF"
-                    android:layout_weight="1"
                     tools:ignore="OnClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WORKING"
+                    android:layout_margin="12dp"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:textAlignment="center"
+                    android:paddingTop="15dp"
+                    android:layout_marginBottom="0dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You can enter the name for a new meeting room, or name of the pre existing room in the above section. After that, click on JOIN button and you will be automatically joined to the room. You will have to provide the video and audio permission for proper functioning. Also, once the room is created, password can be enabled before sharing the link with others. Password protection will enable only those with the passwords to join the room. The other participants can type in the room name on the app and enter the password to join the room. Along with that, a lot of other features are also available such as raising hands, live streaming to YouTube, etc. "
+                    android:layout_marginHorizontal="12dp"
+                    android:textSize="14dp"
+                    android:textColor="#000"
+                    android:justificationMode="inter_word"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ABOUT"
+                    android:layout_margin="12dp"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:textAlignment="center"
+                    android:paddingTop="15dp"
+                    android:layout_marginBottom="0dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BLUPE SPACE is a free and open sourced video conferencing application, aimed at providing free services and promoting open sourced projects. The project used Jitsi Meet which comes with it's own encryption and security features. More over, BLUPE SPACE will not ask you to sign up on the platform or collect any of your data. "
+                    android:layout_marginHorizontal="12dp"
+                    android:textSize="14dp"
+                    android:textColor="#000"
+                    android:justificationMode="inter_word"
+                    android:layout_marginBottom="20dp"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/mybutton"
+                    android:onClick="Coffee"
+                    android:text="Buy Me a Coffee"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="OnClick" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/contact"
+                        android:layout_width="150dp"
+                        android:layout_height="52dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/mybutton"
+                        android:onClick="Contact"
+                        android:paddingHorizontal="20dp"
+                        android:text="Contact"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="OnClick"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="150dp"
+                        android:paddingHorizontal="20dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="12dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_toRightOf="@id/contact"
+                        android:background="@drawable/mybutton"
+                        android:onClick="Contribute"
+                        android:text="Contribute"
+                        android:id="@+id/contribute"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"
+                        tools:ignore="OnClick" />
+                </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 

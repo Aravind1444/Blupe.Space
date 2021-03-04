@@ -23,7 +23,7 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
 
     CarouselView carouselView;
-    int[] sampleImages = {R.drawable.two, R.drawable.features, R.drawable.three, R.drawable.four, R.drawable.five};
+    int[] sampleImages = {R.drawable.rocket, R.drawable.webandapp, R.drawable.rocket, R.drawable.webandapp, R.drawable.rocket};
 
     private FirebaseAnalytics mFirebaseAnalytics;
 
@@ -49,16 +49,26 @@ public class MainActivity extends AppCompatActivity {
 
         //jitsi code
         // using try catch block to handle exceptions
+        // object creation of JitsiMeetConferenceOptions
+        // class by the name of options
+        URL serverURL;
+        //serverURL = (URL) in.readSerializable();
+
+
         try {
-            // object creation of JitsiMeetConferenceOptions
-            // class by the name of options
-            JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
-                    .setServerURL(new URL(""))
-                    .setWelcomePageEnabled(false)
-                    .build();
+            // When using JaaS, replace "https://meet.jit.si" with the proper serverURL
+            //serverURL = (URL) in.readSerializable();
+
+            serverURL = new URL("https://blupe.westus.cloudapp.azure.com").in.readSerializable();
         } catch (MalformedURLException e) {
             e.printStackTrace();
+            throw new RuntimeException("Invalid server URL!");
         }
+
+        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
+                .setServerURL(serverURL)
+                .setWelcomePageEnabled(false)
+                .build();
     }
     public void Contribute (View view) {
         goToUrl ( "https://github.com/Aravind1444/Blupe.Space");
