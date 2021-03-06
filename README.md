@@ -24,7 +24,7 @@ This is the first version of the app. The app is free and open sourced. : [Blupe
  
  <p float="left">
   <img src="https://raw.githubusercontent.com/Aravind1444/Blupe.Space/master/pics/playstore/4.png" width="20%" height="20%"/>
-  <img src="https://raw.githubusercontent.com/Aravind1444/Blupe.Space/master/pics/playstore/1.png" width="20%" height="20%"/>
+  <img src="https://raw.githubusercontent.com/Aravind1444/Blupe.Space/master/pics/playstore/3.png" width="20%" height="20%"/>
   <img src="https://raw.githubusercontent.com/Aravind1444/Blupe.Space/master/pics/playstore/6.png" width="20%" height="20%"/>
 </p>
 
